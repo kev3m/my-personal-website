@@ -303,4 +303,17 @@ header {
 .last-proj-container .last-proj svg {
   margin-left: 20px;
 }
+
+.last-proj-container .squares {
+  margin-top: 40px;
+}
+
+.last-proj-container .squares img {
+  width: 22%;
+  border: 1px solid #000000;
+}
+
+.last-proj-container .squares .left {
+  margin-left: 15%;
+}
 /*# sourceMappingURL=main.css.map */

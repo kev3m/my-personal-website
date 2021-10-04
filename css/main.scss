@@ -248,4 +248,15 @@ $menu-bar-spacing: $menu-width / 5;
 
 	}
 
+	.squares {
+		margin-top: 40px;
+		img {
+			width: 22%;
+			border: 1px solid #000000;
+		}
+		.left {
+			margin-left: 15%
+		}
+	}
+
 }
