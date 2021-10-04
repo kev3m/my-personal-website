@@ -1,13 +1,11 @@
 body {
   margin: 0;
-  padding: 40px 30px;
+  padding: 40px 60px;
   height: 100vh;
-  color: #fff;
   background-color: #FFF;
-  font-family: "Trud Type", Helvetica, sans-serif;
+  font-family: roboto, arial, helvetica;
   font-size: 1rem;
   line-height: 1.2;
-  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -32,6 +30,28 @@ header {
           justify-content: space-between;
 }
 
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #000000 #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 4px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  border-radius: 50px;
+  border: 9px none #ffffff;
+}
+
 .container {
   text-align: center;
 }
@@ -54,7 +74,7 @@ header {
   width: 2px;
   height: 20px;
   margin-left: -1px;
-  background: #fff;
+  background: white;
   -webkit-transform: scale(0);
           transform: scale(0);
   -webkit-transform-origin: 50% 20%;
@@ -93,6 +113,11 @@ header {
           transition-delay: .025s;
   -webkit-transform: scale(1);
           transform: scale(1);
+  background: #000000;
+}
+
+.menu.active span {
+  background: #000000;
 }
 
 .menu.active span:nth-child(1), .menu.active span:nth-child(3) {
@@ -112,7 +137,7 @@ header {
   position: absolute;
   right: 0;
   top: -18px;
-  margin: 40px;
+  margin: 60px;
   outline: none;
   -webkit-animation-duration: 300ms;
           animation-duration: 300ms;
@@ -151,17 +176,6 @@ header {
     -webkit-transform: scale(100%);
             transform: scale(100%);
   }
-}
-
-h1 {
-  font-size: 10rem;
-  font-weight: normal;
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  text-transform: uppercase;
 }
 
 .header__nav {
@@ -209,9 +223,84 @@ h1 {
 }
 
 .header__menu-item a {
+  font-family: "Trud Type", Helvetica, sans-serif;
   letter-spacing: -4px;
   font-weight: 300 !important;
   color: white;
   text-decoration: none;
+}
+
+.intro {
+  margin-top: 20%;
+}
+
+.intro h1 {
+  top: 0%;
+  font-size: 3rem;
+  font-weight: 800;
+  font-family: roboto, arial, helvetica;
+  margin-bottom: -60px;
+}
+
+.intro p {
+  margin-top: 5rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  font-family: roboto, arial, helvetica;
+}
+
+.presentation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 15%;
+  margin-left: 13%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.presentation h1 {
+  font-family: roboto, arial, helvetica;
+  font-size: 3rem;
+  font-weight: 200;
+  margin-bottom: -15px;
+}
+
+.presentation h2 {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.last-proj-container {
+  margin: 10rem auto;
+}
+
+.last-proj-container .last-proj {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.last-proj-container .last-proj h2 {
+  font-weight: 800;
+}
+
+.last-proj-container .last-proj svg {
+  margin-left: 20px;
 }
 /*# sourceMappingURL=main.css.map */

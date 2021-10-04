@@ -1,13 +1,12 @@
 body {
 	margin: 0;
-	padding: 40px 30px;
+	padding: 40px 60px;
 	height: 100vh;
-	color: #fff;
 	background-color: #FFF;
-	font-family: "Trud Type", Helvetica, sans-serif;
+	font-family: roboto, arial, helvetica;
 	font-size: 1rem;
 	line-height: 1.2;
-	overflow: hidden;
+	// overflow: hidden;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -19,6 +18,29 @@ header {
 	display: flex;
 	justify-content: space-between;
 }
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #000000 #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #000000;
+    border-radius: 50px;
+    border: 9px none #ffffff;
+  }
+
 
 // MENU BUTTON
 .container {
@@ -42,7 +64,7 @@ $menu-bar-spacing: $menu-width / 5;
     width: $menu-bar-height;
     height: $menu-width;
     margin-left: - ($menu-bar-height / 2);
-    background: #fff;
+    background: rgb(255, 255, 255);
     transform: scale(0);
     transform-origin: 50% 20%;
     transition: all ease .2s;
@@ -64,15 +86,18 @@ $menu-bar-spacing: $menu-width / 5;
   }
   
   &.active {
+	
     transition-delay: .225s;
     transform: rotateZ(45deg);
 
     &:before {
       transition-delay: .025s;
       transform: scale(1);
+	  background: #000000;
     }
 
     span {
+	background: #000000;
       &:nth-child(1),
       &:nth-child(3) {
         transition-delay: 0s;
@@ -96,7 +121,7 @@ $menu-bar-spacing: $menu-width / 5;
 	position: absolute;
 	right: 0;
 	top: -18px;
-	margin: 40px;
+	margin: 60px;
 	outline: none;
 	animation-duration: 300ms;
 	animation-timing-function: ease;
@@ -119,16 +144,6 @@ $menu-bar-spacing: $menu-width / 5;
 	to {
 		transform: scale(100%);
 	}
-}
-
-h1 {
-	font-size: 10rem;
-	font-weight: normal;
-	position: absolute;
-	top: 40%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	text-transform: uppercase;
 }
 
 .header__nav {
@@ -167,8 +182,70 @@ h1 {
 }
 
 .header__menu-item a {
+	font-family: "Trud Type", Helvetica, sans-serif;
 	letter-spacing: -4px;
 	font-weight: 300 !important;
 	color: rgb(255, 255, 255);
 	text-decoration: none;
+}
+
+
+
+
+.intro {
+	margin-top: 20%;
+	
+	h1 {
+		top: 0%;
+		font-size: 3rem;
+		font-weight: 800;
+		font-family: roboto, arial, helvetica;
+		margin-bottom: -60px;
+          
+	}
+	p {
+		margin-top: 5rem;
+		font-size: 1.5rem;
+		font-weight:300;
+		font-family: roboto, arial, helvetica;
+	}
+	
+}
+
+.presentation {
+	display: flex;
+	flex-direction: row;
+	margin-top: 15%;
+	margin-left: 13%;
+	align-items: center;
+	justify-content: center;
+
+	h1 {
+		font-family: roboto, arial, helvetica;
+		font-size:3rem;
+		font-weight: 200;
+		margin-bottom: -15px;
+	}
+	h2 {
+		font-size: 1rem;
+		font-weight: 300;
+	}
+}
+
+.last-proj-container {
+	margin: 10rem auto;
+
+	.last-proj {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		h2 {
+			font-weight: 800;
+		}
+		svg {
+			margin-left: 20px;
+		}
+
+	}
+
 }

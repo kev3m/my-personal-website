@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", () => {
     const revealerNav = window.revealer({
         revealElementSelector: ".nav-js",
@@ -19,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-$('.js-menu').on('click', function(e) {
+$('.nav-btn-js  ').on('click','a', function(e) {
     e.preventDefault();
     
     $(this).toggleClass('active');
