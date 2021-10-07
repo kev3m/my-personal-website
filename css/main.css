@@ -289,6 +289,34 @@ header {
   font-weight: 300;
 }
 
+.verticaltext {
+  position: absolute;
+  left: 95%;
+  margin-top: -120px;
+}
+
+.verticaltext svg {
+  margin-left: 8px;
+}
+
+.verticaltext a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 50px auto;
+  text-decoration: none;
+  color: #000000;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  text-transform: lowercase;
+  font-weight: 300;
+}
+
 .last-proj-container {
   margin: 10rem auto;
 }
