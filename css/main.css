@@ -306,14 +306,68 @@ header {
 
 .last-proj-container .squares {
   margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  cursor: pointer;
+}
+
+.last-proj-container .squares .r-more {
+  z-index: 2;
+}
+
+.last-proj-container .squares .r-more div {
+  position: absolute;
+  margin: -30px 0px 0px 20px;
+  width: 0%;
+  height: 1px;
+  background-color: #000000;
+}
+
+.last-proj-container .squares .r-more .line {
+  width: 0%;
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
+}
+
+.last-proj-container .squares .r-more p {
+  position: absolute;
+  font-size: 18px;
+  font-weight: 300;
+  margin-top: -45px;
+  margin-left: 30px;
+  opacity: 0%;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  -webkit-transition-delay: 400ms;
+          transition-delay: 400ms;
+}
+
+.last-proj-container .squares .r-more:hover div {
+  width: 10%;
+}
+
+.last-proj-container .squares .r-more:hover .line {
+  -webkit-animation: burger-hover 1s infinite ease-in-out alternate forwards 400ms;
+          animation: burger-hover 1s infinite ease-in-out alternate forwards 400ms;
+}
+
+.last-proj-container .squares .r-more:hover p {
+  opacity: 100%;
+  -webkit-transform: translate(0px, -10px);
+          transform: translate(0px, -10px);
 }
 
 .last-proj-container .squares img {
-  width: 22%;
+  width: 70%;
   border: 1px solid #000000;
 }
 
 .last-proj-container .squares .left {
-  margin-left: 15%;
+  margin-left: 1%;
 }
 /*# sourceMappingURL=main.css.map */
