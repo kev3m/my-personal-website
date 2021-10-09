@@ -12,14 +12,14 @@ body {
 	justify-content: space-between;
 	box-sizing: border-box;
 
-	img {  
-		user-drag: none;  
+	img {
+		user-drag: none;
 		user-select: none;
 		-moz-user-select: none;
 		-webkit-user-drag: none;
 		-webkit-user-select: none;
 		-ms-user-select: none;
-	 }
+	}
 
 }
 
@@ -30,91 +30,93 @@ header {
 }
 
 /* ===== Scrollbar CSS ===== */
-  /* Firefox */
-  * {
-    scrollbar-width: auto;
-    scrollbar-color: #000000 #ffffff;
-  }
+/* Firefox */
+* {
+	scrollbar-width: auto;
+	scrollbar-color: #000000 #ffffff;
+}
 
-  /* Chrome, Edge, and Safari */
-  *::-webkit-scrollbar {
-    width: 4px;
-  }
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+	width: 4px;
+}
 
-  *::-webkit-scrollbar-track {
-    background: #ffffff;
-  }
+*::-webkit-scrollbar-track {
+	background: #ffffff;
+}
 
-  *::-webkit-scrollbar-thumb {
-    background-color: #000000;
-    border-radius: 50px;
-    border: 9px none #ffffff;
-  }
+*::-webkit-scrollbar-thumb {
+	background-color: #000000;
+	border-radius: 50px;
+	border: 9px none #ffffff;
+}
 
 
 // MENU BUTTON
 .container {
-  text-align: center;
+	text-align: center;
 }
+
 $menu-width: 20px;
 $menu-bar-height: $menu-width / 10;
 $menu-bar-spacing: $menu-width / 5;
 
 .menu {
-  display: inline-block;
-  width: $menu-width;
-  position: relative;
-  transition: transform ease .2s;
+	display: inline-block;
+	width: $menu-width;
+	position: relative;
+	transition: transform ease .2s;
 
-  &:before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: $menu-bar-height / 2;
-    width: $menu-bar-height;
-    height: $menu-width;
-    margin-left: - ($menu-bar-height / 2);
-    background: rgb(255, 255, 255);
-    transform: scale(0);
-    transform-origin: 50% 20%;
-    transition: all ease .2s;
-    transition-delay: .175s;
-  }
+	&:before {
+		content: '';
+		position: absolute;
+		left: 50%;
+		top: $menu-bar-height / 2;
+		width: $menu-bar-height;
+		height: $menu-width;
+		margin-left: - ($menu-bar-height / 2);
+		background: rgb(255, 255, 255);
+		transform: scale(0);
+		transform-origin: 50% 20%;
+		transition: all ease .2s;
+		transition-delay: .175s;
+	}
 
-  span {
-    background: rgb(255, 255, 255);
-    display: block;
-    height: $menu-bar-height;
-    width: 100%;
-    margin: $menu-bar-spacing 0;
-    transition: width ease .2s;
-    transition-delay: 0.2s;
-    
-    &:last-child {
-      width: 70%;
-    }
-  }
-  
-  &.active {
-	
-    transition-delay: .225s;
-    transform: rotateZ(45deg);
+	span {
+		background: rgb(255, 255, 255);
+		display: block;
+		height: $menu-bar-height;
+		width: 100%;
+		margin: $menu-bar-spacing 0;
+		transition: width ease .2s;
+		transition-delay: 0.2s;
 
-    &:before {
-      transition-delay: .025s;
-      transform: scale(1);
-	  background: #000000;
-    }
+		&:last-child {
+			width: 70%;
+		}
+	}
 
-    span {
-	background: #000000;
-      &:nth-child(1),
-      &:nth-child(3) {
-        transition-delay: 0s;
-        width: 0;
-      }
-    }
-  }
+	&.active {
+
+		transition-delay: .225s;
+		transform: rotateZ(45deg);
+
+		&:before {
+			transition-delay: .025s;
+			transform: scale(1);
+			background: #000000;
+		}
+
+		span {
+			background: #000000;
+
+			&:nth-child(1),
+			&:nth-child(3) {
+				transition-delay: 0s;
+				width: 0;
+			}
+		}
+	}
 }
 
 // END OF MENU BUTTON
@@ -183,11 +185,11 @@ $menu-bar-spacing: $menu-width / 5;
 	margin: 0;
 }
 
-.header__menu > .header__menu-item {
+.header__menu>.header__menu-item {
 	font-size: 12vh;
 }
 
-.header__menu > .header__menu-item:not(:last-of-type) {
+.header__menu>.header__menu-item:not(:last-of-type) {
 	margin-bottom: 0em;
 }
 
@@ -204,7 +206,7 @@ $menu-bar-spacing: $menu-width / 5;
 
 .intro {
 	margin-top: 20%;
-	
+
 	h1 {
 		top: 0%;
 		font-size: 3rem;
@@ -212,15 +214,16 @@ $menu-bar-spacing: $menu-width / 5;
 		font-family: roboto, arial, helvetica;
 		margin-bottom: -60px;
 		line-height: 1.3;
-          
+
 	}
+
 	p {
 		margin-top: 5rem;
 		font-size: 1.5rem;
-		font-weight:300;
+		font-weight: 300;
 		font-family: roboto, arial, helvetica;
 	}
-	
+
 }
 
 .presentation {
@@ -233,10 +236,11 @@ $menu-bar-spacing: $menu-width / 5;
 
 	h1 {
 		font-family: roboto, arial, helvetica;
-		font-size:3rem;
+		font-size: 3rem;
 		font-weight: 200;
 		margin-bottom: -15px;
 	}
+
 	h2 {
 		font-size: 1rem;
 		font-weight: 300;
@@ -247,12 +251,13 @@ $menu-bar-spacing: $menu-width / 5;
 	position: absolute;
 	left: 95%;
 	margin-top: -120px;
-	
+
 	svg {
-	margin-left: 8px;
+		margin-left: 8px;
 	}
+
 	a {
-		display:flex;
+		display: flex;
 		flex-direction: row;
 		margin: 50px auto;
 		text-decoration: none;
@@ -260,6 +265,10 @@ $menu-bar-spacing: $menu-width / 5;
 		writing-mode: vertical-rl;
 		text-transform: lowercase;
 		font-weight: 300;
+
+		&:hover {
+			color: #808080;
+		}
 	}
 }
 
@@ -271,10 +280,12 @@ $menu-bar-spacing: $menu-width / 5;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
+
 		h2 {
 			font-weight: 800;
-			font-size:40px;
+			font-size: 40px;
 		}
+
 		svg {
 			margin-left: 20px;
 		}
@@ -287,22 +298,26 @@ $menu-bar-spacing: $menu-width / 5;
 		flex-direction: row;
 		cursor: pointer;
 		flex-wrap: wrap;
-		justify-content:space-around;
+		justify-content: space-around;
+
 		.r-more {
 			z-index: 2;
 			width: 30%;
+
 			div {
 				position: absolute;
 				margin: -30px 0px 0px 20px;
-				width: 0%;	
-				height:1px;
+				width: 0%;
+				height: 1px;
 				background-color: #000000;
-				
+
 			}
+
 			.line {
 				width: 0%;
 				transition: all 400ms ease;
 			}
+
 			p {
 				position: absolute;
 				font-size: 18px;
@@ -313,6 +328,7 @@ $menu-bar-spacing: $menu-width / 5;
 				transition: all 300ms ease;
 				transition-delay: 400ms;
 			}
+
 			&:hover {
 
 				div {
@@ -322,6 +338,7 @@ $menu-bar-spacing: $menu-width / 5;
 				.line {
 					animation: burger-hover 1s infinite ease-in-out alternate forwards 400ms;
 				}
+
 				p {
 					opacity: 100%;
 					transform: translate(0px, -10px);
@@ -330,14 +347,83 @@ $menu-bar-spacing: $menu-width / 5;
 			}
 
 		}
+
 		img {
 			width: 100%;
 			border: 1px solid #000000;
 		}
-		
+
 		.left {
 			// margin-left: 50%
 		}
 	}
 
+}
+
+.dropme {
+	margin: 5% 10%;
+}
+
+.work-with-us {
+	display: grid;
+	grid-template-areas: "form illustration";
+	grid-template-columns: 2fr 1.25fr;
+	max-width: 1000px;
+	background: #BDBDBE;
+	margin: 0 auto;
+}
+
+.form {
+	grid-area: form;
+	padding: 0px 50px;
+
+	form {
+		margin-top: 50px;
+	}
+
+	label,
+	input,
+	textarea,
+	button {
+		display: block;
+		outline: none;
+		font-size: 14px;
+		width: 80%;
+	}
+
+	label {
+		border: 0;
+		height: 5px;
+		line-height: 10px;
+		font-weight: 300;
+	}
+
+	input {
+		border: 0;
+		height: 40px;
+		background-color: #BDBDBE;
+		line-height: 40px;
+		border-bottom: 1px solid #000;
+		margin-bottom: 40px;
+	}
+
+	textarea {
+		line-height: 20px;
+		border: 1px solid #000;
+		margin-bottom: 20px;
+		resize: none;
+		padding: 5px;
+		background-color: #BDBDBE;
+	}
+
+	input:focus,
+	textarea:focus {
+		border-color: #ffffff;
+
+	}
+
+	button {
+		
+
+	}
 }

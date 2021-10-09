@@ -317,6 +317,10 @@ header {
   font-weight: 300;
 }
 
+.verticaltext a:hover {
+  color: #808080;
+}
+
 .last-proj-container {
   margin: 10rem auto;
 }
@@ -409,5 +413,71 @@ header {
 .last-proj-container .squares img {
   width: 100%;
   border: 1px solid #000000;
+}
+
+.dropme {
+  margin: 5% 10%;
+}
+
+.work-with-us {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "form illustration";
+  -ms-grid-columns: 2fr 1.25fr;
+      grid-template-columns: 2fr 1.25fr;
+  max-width: 1000px;
+  background: #BDBDBE;
+  margin: 0 auto;
+}
+
+.form {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: form;
+  padding: 0px 50px;
+}
+
+.form form {
+  margin-top: 50px;
+}
+
+.form label,
+.form input,
+.form textarea,
+.form button {
+  display: block;
+  outline: none;
+  font-size: 14px;
+  width: 80%;
+}
+
+.form label {
+  border: 0;
+  height: 5px;
+  line-height: 10px;
+  font-weight: 300;
+}
+
+.form input {
+  border: 0;
+  height: 40px;
+  background-color: #BDBDBE;
+  line-height: 40px;
+  border-bottom: 1px solid #000;
+  margin-bottom: 40px;
+}
+
+.form textarea {
+  line-height: 20px;
+  border: 1px solid #000;
+  margin-bottom: 20px;
+  resize: none;
+  padding: 5px;
+  background-color: #BDBDBE;
+}
+
+.form input:focus,
+.form textarea:focus {
+  border-color: #ffffff;
 }
 /*# sourceMappingURL=main.css.map */
