@@ -428,6 +428,20 @@ header {
   max-width: 1000px;
   background: #BDBDBE;
   margin: 0 auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.work-with-us h1 {
+  font-size: 64px;
+  font-weight: 200;
+}
+
+.work-with-us .drop svg {
+  position: absolute;
+  margin-top: -86px;
+  margin-left: 11em;
 }
 
 .form {
@@ -471,6 +485,7 @@ header {
   line-height: 20px;
   border: 1px solid #000;
   margin-bottom: 20px;
+  margin-top: 20px;
   resize: none;
   padding: 5px;
   background-color: #BDBDBE;

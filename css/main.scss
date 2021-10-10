@@ -371,7 +371,24 @@ $menu-bar-spacing: $menu-width / 5;
 	max-width: 1000px;
 	background: #BDBDBE;
 	margin: 0 auto;
+	align-items: center;
+
+	h1 {
+		font-size:64px;
+		font-weight:200;	
+	}
+	.drop {
+		svg {
+			position: absolute;
+			margin-top:-86px;
+			margin-left:11em;
+		}
+	}
+
+
 }
+
+
 
 .form {
 	grid-area: form;
@@ -411,6 +428,7 @@ $menu-bar-spacing: $menu-width / 5;
 		line-height: 20px;
 		border: 1px solid #000;
 		margin-bottom: 20px;
+		margin-top: 20px;
 		resize: none;
 		padding: 5px;
 		background-color: #BDBDBE;
