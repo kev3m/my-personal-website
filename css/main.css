@@ -545,4 +545,12 @@ header {
 .form textarea:focus {
   border-color: #ffffff;
 }
+
+footer {
+  margin: 3% 0px 2%;
+}
+
+footer i {
+  margin-right: 10px;
+}
 /*# sourceMappingURL=main.css.map */
