@@ -18,3 +18,5 @@ function smoothScroll() {
 }
 
 smoothScroll();
+
+AOS.init();

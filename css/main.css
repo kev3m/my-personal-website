@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 40px 60px;
@@ -473,48 +477,6 @@ header {
   font-weight: 400;
 }
 
-.form button::after,
-.form button::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 0px;
-  opacity: 0;
-  -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-}
-
-.form button::after {
-  width: 30px;
-  height: 1px;
-  background: black;
-  -webkit-transform: translateX(-3px);
-          transform: translateX(-3px);
-  margin-top: 0px;
-}
-
-.form button::before {
-  content: "";
-  -webkit-transform: rotate(-135deg) translateX(50%);
-          transform: rotate(-135deg) translateX(50%);
-  width: 11px;
-  height: 11px;
-  background: transparent;
-  border-left: 1px solid black;
-  border-bottom: 1px solid black;
-  margin-top: -1px;
-}
-
-.form button:hover {
-  padding: 0px 60px 0px 0px;
-}
-
-.form button:hover::after,
-.form button:hover::before {
-  opacity: 1;
-  right: 15px;
-}
-
 .form label {
   border: 0;
   height: 5px;
@@ -546,11 +508,50 @@ header {
   border-color: #ffffff;
 }
 
-footer {
+footer .footer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin: 3% 0px 2%;
 }
 
+footer .footer-container .links {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .footer-container .links a {
+  text-decoration: none;
+  margin-left: 15px;
+  font-weight: 400;
+  list-style: none;
+  color: #000000;
+}
+
+footer .footer-container .links a:hover {
+  color: #808080;
+}
+
+footer a {
+  text-decoration: none;
+  color: #000000;
+}
+
+footer a:hover {
+  color: #808080;
+}
+
 footer i {
-  margin-right: 10px;
+  margin-right: 15px;
+  cursor: pointer;
 }
 /*# sourceMappingURL=main.css.map */
