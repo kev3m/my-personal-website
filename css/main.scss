@@ -1,13 +1,13 @@
 html {
 	scroll-behavior: smooth;
 	cursor: none;
+	background: #fff;
 }
 
 body {
 	margin: 0;
 	padding: 40px 60px;
 	height: 100vh;
-	background-color: #FFF;
 	font-family: roboto, arial, helvetica;
 	font-size: 1rem;
 	line-height: 1.2;
@@ -54,6 +54,41 @@ header {
 	background-color: #000000;
 	border-radius: 50px;
 	border: 9px none #ffffff;
+}
+
+.inner-cursor {
+	z-index: 999;
+	position: fixed;
+	left: 10px;
+	width: 10px;
+	height: 10px;
+	transform: translate(-50%, -50%, );
+	mix-blend-mode: difference;
+    background: rgb(67, 119, 233);
+	border-radius: 50%;
+	pointer-events: none;
+	transition: width 0.5s, height 0.5s;
+}
+
+.inner-cursor.grow {
+	
+	width: 25px;
+	height: 25px;
+	transition: width 0.5s, height 0.5s;
+}
+
+.outer-cursor {
+	z-index: 999;
+	position: fixed;
+	left: 10px;
+	width: 25px;
+	height: 25px;
+	transform: translate(-50%, -50%);
+	border: 1px solid rgb(79, 81, 241);
+	mix-blend-mode: difference;
+	border-radius: 50%;
+	pointer-events: none;
+	transition: 0.1s;
 }
 
 
@@ -365,7 +400,7 @@ $menu-bar-spacing: $menu-width / 5;
 }
 
 .dropme {
-	margin: 5% 10% ;
+	margin: 5% 10%;
 }
 
 .work-with-us {
@@ -378,14 +413,15 @@ $menu-bar-spacing: $menu-width / 5;
 	align-items: center;
 
 	h1 {
-		font-size:64px;
-		font-weight:200;	
+		font-size: 64px;
+		font-weight: 200;
 	}
+
 	.drop {
 		svg {
 			position: absolute;
-			margin-top:-86px;
-			margin-left:11em;
+			margin-top: -86px;
+			margin-left: 11em;
 		}
 	}
 
@@ -398,29 +434,29 @@ $menu-bar-spacing: $menu-width / 5;
 	grid-area: form;
 	padding: 40px 50px;
 
-	
+
 
 	label,
 	input,
-	textarea{
+	textarea {
 		display: block;
 		outline: none;
 		font-size: 14px;
 		width: 80%;
 	}
-	
-	button{
+
+	button {
 		background: none;
-		border:0;
-		color: rgb(0, 0, 0);	
+		border: 0;
+		color: rgb(0, 0, 0);
 		font-size: 14px;
 		position: relative;
-		transition:  all .4s cubic-bezier(0.645, 0.045, 0.355, 1);
+		transition: all .4s cubic-bezier(0.645, 0.045, 0.355, 1);
 		cursor: pointer;
 		display: block;
 		font-weight: 400;
-	  }
-	  
+	}
+
 	//   button::after,
 	//   button::before{
 	// 	content: "";
@@ -430,7 +466,7 @@ $menu-bar-spacing: $menu-width / 5;
 	// 	  opacity: 0;
 	// 	transition:         all .4s cubic-bezier(0.645, 0.045, 0.355, 1);
 	//   }
-	  
+
 	//   button::after{
 	// 	  width: 30px;
 	// 	  height: 1px;
@@ -438,7 +474,7 @@ $menu-bar-spacing: $menu-width / 5;
 	// 	  transform: translateX(-3px);
 	// 	  margin-top: 0px;
 	//   }
-	  
+
 	//   button::before{
 	// 	  content: "";
 	// 	  transform: rotate(-135deg) translateX(50%);
@@ -449,12 +485,12 @@ $menu-bar-spacing: $menu-width / 5;
 	// 	  border-bottom: 1px solid rgb(0, 0, 0);
 	// 	margin-top: -1px;
 	//   }
-	  
-	  
+
+
 	//   button:hover{
 	// 	padding: 0px 60px 0px 0px;
 	//   }
-	  
+
 	//   button:hover::after,
 	//   button:hover::before{
 	// 	opacity: 1;
@@ -493,37 +529,37 @@ $menu-bar-spacing: $menu-width / 5;
 
 	}
 
-	
+
 }
 
 footer {
-	
+
 	.footer-container {
-	display:flex;
-	flex-direction: row;
-	justify-content:space-between;
-	// align-content: space-between;
-	margin: 3% 0px 2% ;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		// align-content: space-between;
+		margin: 3% 0px 2%;
 
 		.links {
 			list-style: none;
 			display: flex;
-			
+
 			a {
 				text-decoration: none;
 				margin-left: 15px;
 				font-weight: 400;
 				list-style: none;
-				color:#000000;
-				
+				color: #000000;
+
 				&:hover {
 					color: #808080;
 				}
 			}
 		}
-	
+
 	}
-	
+
 	a {
 		text-decoration: none;
 		color: #000000;
@@ -532,6 +568,7 @@ footer {
 			color: #808080;
 		}
 	}
+
 	i {
 		margin-right: 15px;
 		cursor: pointer;
