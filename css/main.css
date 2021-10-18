@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  cursor: none;
 }
 
 body {
@@ -241,6 +242,29 @@ header {
   font-weight: 300 !important;
   color: white;
   text-decoration: none;
+}
+
+#hover-this {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#hover-this:hover ~ .cursor {
+  -webkit-transform: translate(-50%, -50%) scale(8);
+          transform: translate(-50%, -50%) scale(8);
+}
+
+.cursor {
+  pointer-events: none;
+  position: fixed;
+  padding: 0.3rem;
+  background-color: #000000;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
 .intro {

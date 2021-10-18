@@ -24,3 +24,6 @@ $('.nav-btn-js  ').on('click','a', function(e) {
     $(this).toggleClass('active');
   });
 
+  AOS.init();
+
+  
