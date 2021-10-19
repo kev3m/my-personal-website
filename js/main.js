@@ -43,7 +43,7 @@ $('.nav-btn-js  ').on('click','a', function(e) {
     outerCursor.style.top = `${y}px`
   }
 
-  let links = Array.from(document.querySelectorAll("h1"));
+  let links = Array.from(document.querySelectorAll("a"));
 
   links.forEach(link => {
       link.addEventListener('mouseover', ()=>{

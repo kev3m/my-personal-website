@@ -1,6 +1,6 @@
 html {
 	scroll-behavior: smooth;
-	cursor: none;
+	cursor:none;
 	background: #fff;
 }
 
@@ -64,7 +64,7 @@ header {
 	height: 10px;
 	transform: translate(-50%, -50%, );
 	mix-blend-mode: difference;
-    background: rgb(67, 119, 233);
+    background: rgb(97, 97, 97);
 	border-radius: 50%;
 	pointer-events: none;
 	transition: width 0.5s, height 0.5s;
@@ -84,7 +84,7 @@ header {
 	width: 25px;
 	height: 25px;
 	transform: translate(-50%, -50%);
-	border: 1px solid rgb(79, 81, 241);
+	border: 1px solid rgb(85, 85, 85);
 	mix-blend-mode: difference;
 	border-radius: 50%;
 	pointer-events: none;
@@ -169,7 +169,6 @@ $menu-bar-spacing: $menu-width / 5;
 	border-radius: 50%;
 	background-color: #000000;
 	border: 0;
-	cursor: pointer;
 	position: absolute;
 	right: 0;
 	top: -18px;
@@ -332,10 +331,10 @@ $menu-bar-spacing: $menu-width / 5;
 	}
 
 	.squares {
+		
 		margin-top: 40px;
 		display: flex;
 		flex-direction: row;
-		cursor: pointer;
 		flex-wrap: wrap;
 		justify-content: space-around;
 
@@ -452,7 +451,6 @@ $menu-bar-spacing: $menu-width / 5;
 		font-size: 14px;
 		position: relative;
 		transition: all .4s cubic-bezier(0.645, 0.045, 0.355, 1);
-		cursor: pointer;
 		display: block;
 		font-weight: 400;
 	}
@@ -571,6 +569,5 @@ footer {
 
 	i {
 		margin-right: 15px;
-		cursor: pointer;
 	}
 }
