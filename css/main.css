@@ -75,7 +75,7 @@ header {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   mix-blend-mode: difference;
-  background: #616161;
+  background: #a5a5a5;
   border-radius: 50%;
   pointer-events: none;
   -webkit-transition: width 0.5s, height 0.5s;
@@ -97,7 +97,7 @@ header {
   height: 25px;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  border: 1px solid #555555;
+  border: 1px solid dimgray;
   mix-blend-mode: difference;
   border-radius: 50%;
   pointer-events: none;
@@ -127,7 +127,7 @@ header {
   width: 2px;
   height: 20px;
   margin-left: -1px;
-  background: white;
+  background: black;
   -webkit-transform: scale(0);
           transform: scale(0);
   -webkit-transform-origin: 50% 20%;
@@ -139,7 +139,7 @@ header {
 }
 
 .menu span {
-  background: white;
+  background: black;
   display: block;
   height: 2px;
   width: 100%;
@@ -184,7 +184,7 @@ header {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #000000;
+  background-color: #ffffff;
   border: 0;
   position: absolute;
   right: 0;
@@ -275,6 +275,7 @@ header {
 }
 
 .header__menu-item a {
+  cursor: none;
   font-family: "Trud Type", Helvetica, sans-serif;
   letter-spacing: -4px;
   font-weight: 300 !important;
@@ -410,6 +411,11 @@ header {
   width: 30%;
 }
 
+.last-proj-container .squares .r-more a {
+  text-decoration: none;
+  color: #000000;
+}
+
 .last-proj-container .squares .r-more div {
   position: absolute;
   margin: -30px 0px 0px 20px;
@@ -428,6 +434,7 @@ header {
   position: absolute;
   font-size: 18px;
   font-weight: 300;
+  text-decoration: none;
   margin-top: -45px;
   margin-left: 30px;
   opacity: 0%;
@@ -502,16 +509,84 @@ header {
   width: 80%;
 }
 
-.form button {
-  background: none;
-  border: 0;
-  color: black;
-  font-size: 14px;
-  position: relative;
-  -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+@-webkit-keyframes short-press {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes short-press {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.form .hide {
+  display: none;
+}
+
+.form .submit-button {
   display: block;
   font-weight: 400;
+  font-size: .75em;
+  letter-spacing: 1px;
+  height: 38px;
+  width: 120px;
+  line-height: 38px;
+  overflow: hidden;
+  background: transparent;
+  border: 1px solid #000;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  text-align: left;
+}
+
+.form .submit-button:hover, .form .submit-button:focus {
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form .submit-button.animated {
+  -webkit-animation: 0.75s short-press cubic-bezier(0.77, 0, 0.175, 1) forwards;
+          animation: 0.75s short-press cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+.form .submit-button > span {
+  display: block;
+  color: black;
+}
+
+.form .submit-button > span.pre-state-msg {
+  -webkit-transition: all 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+  -webkit-transition-delay: .75s;
+          transition-delay: .75s;
+}
+
+.form .submit-button.state-1 .pre-state-msg {
+  margin-top: -38px;
+}
+
+.form .submit-button.state-2 .pre-state-msg {
+  margin-top: -76px;
 }
 
 .form label {

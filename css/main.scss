@@ -1,6 +1,6 @@
 html {
 	scroll-behavior: smooth;
-	cursor:none;
+	cursor: none;
 	background: #fff;
 }
 
@@ -64,14 +64,14 @@ header {
 	height: 10px;
 	transform: translate(-50%, -50%, );
 	mix-blend-mode: difference;
-    background: rgb(97, 97, 97);
+	background: rgb(165, 165, 165);
 	border-radius: 50%;
 	pointer-events: none;
 	transition: width 0.5s, height 0.5s;
 }
 
 .inner-cursor.grow {
-	
+
 	width: 25px;
 	height: 25px;
 	transition: width 0.5s, height 0.5s;
@@ -84,7 +84,7 @@ header {
 	width: 25px;
 	height: 25px;
 	transform: translate(-50%, -50%);
-	border: 1px solid rgb(85, 85, 85);
+	border: 1px solid rgb(105, 105, 105);
 	mix-blend-mode: difference;
 	border-radius: 50%;
 	pointer-events: none;
@@ -115,7 +115,7 @@ $menu-bar-spacing: $menu-width / 5;
 		width: $menu-bar-height;
 		height: $menu-width;
 		margin-left: - ($menu-bar-height / 2);
-		background: rgb(255, 255, 255);
+		background: rgb(0, 0, 0);
 		transform: scale(0);
 		transform-origin: 50% 20%;
 		transition: all ease .2s;
@@ -123,7 +123,7 @@ $menu-bar-spacing: $menu-width / 5;
 	}
 
 	span {
-		background: rgb(255, 255, 255);
+		background: rgb(0, 0, 0);
 		display: block;
 		height: $menu-bar-height;
 		width: 100%;
@@ -167,7 +167,7 @@ $menu-bar-spacing: $menu-width / 5;
 	width: 40px;
 	height: 40px;
 	border-radius: 50%;
-	background-color: #000000;
+	background-color: #ffffff;
 	border: 0;
 	position: absolute;
 	right: 0;
@@ -233,6 +233,7 @@ $menu-bar-spacing: $menu-width / 5;
 }
 
 .header__menu-item a {
+	cursor: none;
 	font-family: "Trud Type", Helvetica, sans-serif;
 	letter-spacing: -4px;
 	font-weight: 300 !important;
@@ -331,7 +332,7 @@ $menu-bar-spacing: $menu-width / 5;
 	}
 
 	.squares {
-		
+
 		margin-top: 40px;
 		display: flex;
 		flex-direction: row;
@@ -341,6 +342,13 @@ $menu-bar-spacing: $menu-width / 5;
 		.r-more {
 			z-index: 2;
 			width: 30%;
+
+			a {
+				text-decoration: none;
+				color: #000000;
+
+
+			}
 
 			div {
 				position: absolute;
@@ -360,6 +368,7 @@ $menu-bar-spacing: $menu-width / 5;
 				position: absolute;
 				font-size: 18px;
 				font-weight: 300;
+				text-decoration: none;
 				margin-top: -45px;
 				margin-left: 30px;
 				opacity: 0%;
@@ -444,15 +453,69 @@ $menu-bar-spacing: $menu-width / 5;
 		width: 80%;
 	}
 
-	button {
-		background: none;
-		border: 0;
-		color: rgb(0, 0, 0);
-		font-size: 14px;
-		position: relative;
-		transition: all .4s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+	@keyframes short-press {
+		0% {
+			transform: scale(1);
+		}
+
+		50% {
+			transform: scale(.9);
+		}
+
+		100% {
+			transform: scale(1);
+		}
+	}
+
+	.hide {
+		display: none;
+	}
+
+	.submit-button {
 		display: block;
 		font-weight: 400;
+		font-size: .75em;
+		letter-spacing: 1px;
+		height: 38px;
+		width: 120px;
+		line-height: 38px;
+		overflow: hidden;
+		background: transparent;
+		border: 1px solid #000;
+		transition: all .3s ease;
+		text-align: left;
+
+		&:hover,
+		&:focus {
+			box-shadow: 0 5px 15px rgba(black, .1);
+		}
+
+		&.animated {
+			animation: .75s short-press cubic-bezier(0.770, 0.000, 0.175, 1.000) forwards;
+		}
+
+		>span {
+			display: block;
+			color: rgb(0, 0, 0);
+
+			&.pre-state-msg {
+				transition: all .7s cubic-bezier(0.770, 0.000, 0.175, 1.000);
+				transition-delay: .75s;
+			}
+		}
+
+		&.state-1 {
+			.pre-state-msg {
+				margin-top: -38px;
+			}
+		}
+
+		&.state-2 {
+			.pre-state-msg {
+				margin-top: -76px;
+			}
+		}
 	}
 
 	//   button::after,

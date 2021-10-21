@@ -16,22 +16,23 @@
 </head>
 
 <body>
-    
+
     <div>
 
         <img src="/assets/images/Me logo.png" alt="" srcset="">
-        <button class="header__button nav-btn-js" type="button">
+        <div class="nav-button">
+        <button class="header__button nav-btn-js" id="jonatasesteveaqui" type="button">
             <div class="container"></div>
-            <a class="menu js-menu" href="#"><span></span><span></span><span></span></a></div>
+            <a class="menu js-menu" href="#"><span></span><span></span><span></span></a>
     </button>
-
+</div>
+</div>
 
     <nav class="header__nav nav-js" data-active="false">
-
         <ul class="header__menu">
             <li data-scroll class="header__menu-item"><a href="#about">about</a></li>
-            <li class="header__menu-item"><a href="#">projects</a></li>
-            <li class="header__menu-item"><a href="#">contact</a></li>
+            <li class="header__menu-item"><a href="#projects">projects</a></li>
+            <li class="header__menu-item"><a href="#contact">contact</a></li>
             <li class="header__menu-item"><a href="#">blog</a></li>
         </ul>
     </nav>
@@ -41,7 +42,7 @@
     </header>
 
     <main>
-        
+
 
         <section>
 
@@ -55,10 +56,10 @@
 
             </div>
             <div class="presentation">
-<div class="cursor">
-<div class="inner-cursor"></div>
-<div class="outer-cursor"></div>
-</div>
+                <div class="cursor">
+                    <div class="inner-cursor"></div>
+                    <div class="outer-cursor"></div>
+                </div>
                 <img data-aos="fade-up" data-aos-duration="500" src="/assets/images/gallery/illustration1.png"
                     alt="men doing multiple things" srcset="">
                 <div class="text-apres">
@@ -105,33 +106,44 @@
 
                 </div>
                 <div data-aos="fade-up" data-aos-duration="1000" class="squares">
+                    
+                        <div class="r-more">
+                         <a href="#">   
+                            <img src="/assets/images/gallery/7zipthumb.png" alt="" srcset="">
+                            <div class="line"></div>
+                            <p>see more</p>
+                    </a>
+                </div>
+                
                     <div class="r-more">
-                        <img src="/assets/images/gallery/7zipthumb.png" alt="" srcset="">
-                        <div class="line"></div>
-                        <p href="#">see more</p>
-                    </div>
-
-                    <div class="r-more">
+                       <a href="#"> 
                         <img class='left' src="/assets/images/gallery/erinthumb.png" alt="" srcset="">
                         <div class="line"></div>
-                        <p href="#">see more</p>
+                        <p>see more</p>
+                    </a>
                     </div>
 
+                
+            </div>
+            
+            <div data-aos="fade-up" data-aos-duration="1500" class="squares">
+                <div class="r-more">
+                <a href="#">
+                    <img src="/assets/images/gallery/7zipthumb.png" alt="" srcset="">
+                    <div class="line"></div>
+                    <p>see more</p>
+            </a>
                 </div>
-                <div data-aos="fade-up" data-aos-duration="1500" class="squares">
-                    <div class="r-more">
-                        <img src="/assets/images/gallery/7zipthumb.png" alt="" srcset="">
-                        <div class="line"></div>
-                        <p href="#">see more</p>
-                    </div>
 
-                    <div class="r-more">
-                        <img class='left' src="/assets/images/gallery/erinthumb.png" alt="" srcset="">
-                        <div class="line"></div>
-                        <p href="#">see more</p>
-                    </div>
-
+                <div class="r-more">
+                    <a href="#">
+                    <img class='left' src="/assets/images/gallery/erinthumb.png" alt="" srcset="">
+                    <div class="line"></div>
+                    <p>see more</p>
+                </a>
                 </div>
+
+            </div>
         </section>
         <section>
             <svg width="195" height="13" viewBox="0 0 195 13" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -152,7 +164,11 @@
                             <label for="project-idea">How can we work together?</label>
                             <textarea id="project-idea" rows="4">
                   </textarea>
-                            <button type="button">Submit</button>
+                  <button class="submit-button state-0">
+                    <span class="pre-state-msg">Submit</span>
+                    <span class="current-state-msg hide">Sending...</span>
+                    <span class="done-state-msg hide">Done!</span>
+                  </button>
                         </form>
                     </div>
                     <div class="drop">
