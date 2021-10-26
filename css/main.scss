@@ -97,6 +97,9 @@ header {
 	text-align: center;
 }
 
+
+
+.nav-button {
 $menu-width: 20px;
 $menu-bar-height: $menu-width / 10;
 $menu-bar-spacing: $menu-width / 5;
@@ -136,8 +139,10 @@ $menu-bar-spacing: $menu-width / 5;
 		}
 	}
 
-	&.active {
+}
 
+ &.active {
+		a {
 		transition-delay: .225s;
 		transform: rotateZ(45deg);
 
@@ -157,8 +162,9 @@ $menu-bar-spacing: $menu-width / 5;
 			}
 		}
 	}
-}
+ }
 
+}
 // END OF MENU BUTTON
 
 

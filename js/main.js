@@ -1,10 +1,12 @@
+var revealerNav = window.revealer({
+    revealElementSelector: ".nav-js",
+    options: {
+        anchorSelector: ".nav-btn-js",
+    },
+});
+
 document.addEventListener("DOMContentLoaded", () => {
-    const revealerNav = window.revealer({
-        revealElementSelector: ".nav-js",
-        options: {
-            anchorSelector: ".nav-btn-js",
-        },
-    });
+    
 
     const actionBtn = document.querySelector(".nav-btn-js");
     actionBtn.addEventListener("click", () => {
@@ -23,16 +25,26 @@ document.addEventListener("DOMContentLoaded", () => {
             document.getElementById("jonatasesteveaqui").setAttribute("data-open", false);
         }
     }
+
+
 });
 
 
 
-
-$('.nav-button').on('click', 'a', function (e) {
+$('.nav-button').on('click',function (e) {
     e.preventDefault();
-
     $(this).toggleClass('active');
+
 });
+
+// $('.nav-button').on('click','a', function (e) {
+//     e.preventDefault();
+//     $(this).toggleClass('active');
+
+// });
+
+
+
 
 AOS.init();
 
@@ -84,3 +96,6 @@ const setInitialButtonState = function () {
 };
 
 button.addEventListener('click', updateButtonMsg);
+
+
+
