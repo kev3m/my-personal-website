@@ -13,10 +13,25 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!revealerNav.isRevealed()) {
             revealerNav.reveal();
             actionBtn.setAttribute("data-open", true);
-        } else {
+            $('.nav-button').on('click',function (e) {
+                e.preventDefault();
+                $(this).addClass('active');
+            
+            });
+
+
+        } else  {
             revealerNav.hide();
             actionBtn.setAttribute("data-open", false);
+            $('.nav-button').on('click',function (e) {
+                e.preventDefault();
+                $(this).removeClass('active');
+            
+            });
+            
         }
+
+        
     });
     const linksDoMenuCaralho = document.getElementsByClassName("header__menu-item")
     for (let elm of linksDoMenuCaralho) {
@@ -26,24 +41,26 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    if (actionBtn.setAttribute("data-open", true)) {
+        $('.nav-button').on(function (e) {
+            e.preventDefault();
+            $(this).addClass('active');
+        
+        });
 
+    } else {
+        $('.nav-button').on(function (e) {
+            e.preventDefault();
+            $(this).removeClass('active');
+        
+        });
+
+    }
+
+
+
+    
 });
-
-
-
-$('.nav-button').on('click',function (e) {
-    e.preventDefault();
-    $(this).toggleClass('active');
-
-});
-
-// $('.nav-button').on('click','a', function (e) {
-//     e.preventDefault();
-//     $(this).toggleClass('active');
-
-// });
-
-
 
 
 AOS.init();

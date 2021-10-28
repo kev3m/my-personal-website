@@ -1,14 +1,14 @@
 html {
 	scroll-behavior: smooth;
 	cursor: none;
-	background: #fff;
+	background: #F0F0F3;
 }
 
 body {
 	margin: 0;
 	padding: 40px 60px;
 	height: 100vh;
-	font-family: roboto, arial, helvetica;
+	font-family: 'Lexend Deca', sans-serif;
 	font-size: 1rem;
 	line-height: 1.2;
 	// overflow: hidden;
@@ -240,7 +240,7 @@ $menu-bar-spacing: $menu-width / 5;
 
 .header__menu-item a {
 	cursor: none;
-	font-family: "Trud Type", Helvetica, sans-serif;
+	font-family: 'DM Serif Text', serif;
 	letter-spacing: -4px;
 	font-weight: 300 !important;
 	color: rgb(255, 255, 255);
@@ -256,7 +256,7 @@ $menu-bar-spacing: $menu-width / 5;
 		top: 0%;
 		font-size: 3rem;
 		font-weight: 800;
-		font-family: roboto, arial, helvetica;
+		font-family: 'DM Serif Text', serif;
 		margin-bottom: -60px;
 		line-height: 1.3;
 
@@ -266,7 +266,7 @@ $menu-bar-spacing: $menu-width / 5;
 		margin-top: 5rem;
 		font-size: 1.5rem;
 		font-weight: 300;
-		font-family: roboto, arial, helvetica;
+		font-family: 'Lexend Deca', sans-serif;
 	}
 
 }
@@ -280,13 +280,14 @@ $menu-bar-spacing: $menu-width / 5;
 	justify-content: center;
 
 	h1 {
-		font-family: roboto, arial, helvetica;
+		font-family: 'DM Serif Text', serif;
 		font-size: 3rem;
 		font-weight: 200;
 		margin-bottom: -15px;
 	}
 
 	h2 {
+
 		font-size: 1rem;
 		font-weight: 300;
 	}
@@ -310,6 +311,7 @@ $menu-bar-spacing: $menu-width / 5;
 		writing-mode: vertical-rl;
 		text-transform: lowercase;
 		font-weight: 300;
+		font-family: 'DM Serif Text', serif;;
 
 		&:hover {
 			color: #808080;
@@ -327,6 +329,7 @@ $menu-bar-spacing: $menu-width / 5;
 		align-items: center;
 
 		h2 {
+			font-family: 'DM Serif Text', serif;;
 			font-weight: 800;
 			font-size: 40px;
 		}
@@ -403,7 +406,9 @@ $menu-bar-spacing: $menu-width / 5;
 
 		img {
 			width: 100%;
-			border: 1px solid #000000;
+			// border: 5px solid #fafafa;
+			drop-shadow: -8px -8px 24px 0 #FFFFFF
+			8px 8px 24px 0 #AEAEC0 40%;
 		}
 
 		.left {
@@ -429,6 +434,7 @@ $menu-bar-spacing: $menu-width / 5;
 	h1 {
 		font-size: 64px;
 		font-weight: 200;
+		font-family: 'DM Serif Text', serif;
 	}
 
 	.drop {
@@ -488,7 +494,11 @@ $menu-bar-spacing: $menu-width / 5;
 		line-height: 38px;
 		overflow: hidden;
 		background: transparent;
-		border: 1px solid #000;
+		border: #000;
+		border-width: 0px 0px 1px 0px;
+		border-style: none none solid none;
+		
+		
 		transition: all .3s ease;
 		text-align: left;
 
@@ -618,7 +628,7 @@ footer {
 				font-weight: 400;
 				list-style: none;
 				color: #000000;
-
+				font-family: 'DM Serif Text';
 				&:hover {
 					color: #808080;
 				}
