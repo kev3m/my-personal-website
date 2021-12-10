@@ -438,7 +438,7 @@ header {
 
 .last-proj-container .squares img {
   width: 100%;
-  drop-shadow: -8px -8px 24px 0 #FFFFFF 8px 8px 24px 0 #AEAEC0 40%;
+  drop-shadow: -8px -8px 24px 0 #FFFFFF 8px 8px 24px 0 #AEAEC0 40%;
 }
 
 .dropme {
@@ -652,11 +652,9 @@ footer i {
 }
 
 @media screen and (max-width: 768px) {
-  .inner-cursor {
-    display: none;
-  }
-  .outer-cursor {
-    display: none;
+  body {
+    padding: 40px 20px;
+    overflow: hidden;
   }
   .intro h1 {
     font-size: 30px;
@@ -676,6 +674,9 @@ footer i {
   }
   .presentation img {
     width: 70%;
+  }
+  .last-proj-container svg {
+    display: none;
   }
   .mobile-dropt {
     display: inline;
@@ -748,7 +749,7 @@ footer i {
   }
   .squares img {
     min-width: 130%;
-    drop-shadow: -8px -8px 24px 0 #FFFFFF 8px 8px 24px 0 #AEAEC0 40%;
+    drop-shadow: -8px -8px 24px 0 #FFFFFF 8px 8px 24px 0 #AEAEC0 40%;
   }
 }
 /*# sourceMappingURL=main.css.map */
