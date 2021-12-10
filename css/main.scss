@@ -662,10 +662,21 @@ footer {
 	// 	display: none;
 	// }
 
-
+.intro {
+	h1 {
+		font-size: 30px;
+		margin-bottom: -40px;
+	}
+	p {
+		font-size:15px;
+	}
+}
 	.presentation {
 	display: flex;
 	flex-direction: column;
+	img {
+		width: 70%;
+	}
 }
 .mobile-dropt{
 	display: inline;

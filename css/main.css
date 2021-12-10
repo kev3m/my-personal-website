@@ -652,6 +652,13 @@ footer i {
 }
 
 @media screen and (max-width: 768px) {
+  .intro h1 {
+    font-size: 30px;
+    margin-bottom: -40px;
+  }
+  .intro p {
+    font-size: 15px;
+  }
   .presentation {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -660,6 +667,9 @@ footer i {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .presentation img {
+    width: 70%;
   }
   .mobile-dropt {
     display: inline;
