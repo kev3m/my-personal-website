@@ -114,5 +114,12 @@ const setInitialButtonState = function () {
 
 button.addEventListener('click', updateButtonMsg);
 
-
+var animation = bodymovin.loadAnimation({
+    container: document.getElementById('bm'),
+    renderer: 'svg',
+    loop: false,
+    speed: 1,
+    autoplay: true,
+    path: 'data.json'
+  })
 
