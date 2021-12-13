@@ -709,11 +709,12 @@ footer i {
             flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    z-index: -99;
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
   .squares .r-more {
-    z-index: 2;
+    z-index: -2;
     width: 30%;
   }
   .squares .r-more a {

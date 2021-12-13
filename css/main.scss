@@ -733,10 +733,11 @@ footer {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
+		z-index: -99;
 		justify-content: space-around;
 
 		.r-more {
-			z-index: 2;
+			z-index: -2;
 			width: 30%;
 
 			a {
@@ -779,6 +780,7 @@ footer {
 		}
 
 		img {
+		
 			min-width: 130%;
 			// border: 5px solid #fafafa;
 			drop-shadow: -8px -8px 24px 0 #FFFFFF 8px 8px 24px 0 #AEAEC0 40%;
